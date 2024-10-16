@@ -301,6 +301,7 @@ for _ in range(len(chosen_word)):
     str += "_"
 
 print(logo)
+print("\n\n")
 print(str)
 
 end_game=False
@@ -310,7 +311,7 @@ while end_game!=True:
     guess = guess.lower()
 
     if guess in str:
-        print("You've already guessed this letter. Try another one")
+        print("\nYou've already guessed this letter. Try another one")
 
     for pos in range(len(chosen_word)):
         letter = chosen_word[pos]
@@ -319,19 +320,19 @@ while end_game!=True:
             flag=1
     
     if flag==0:
-        print("Wrong Guess, You lose a life!")
+        print("\nWrong Guess, You lose a life!")
         life-=1
 
         if life==0:
             end_game=True
-            print("YOU LOST, GAME OVER")
+            print("\nYOU LOST, GAME OVER")
 
     if '_' not in str:
         end_game=True
-        print("GAME OVER, YOU WIN, CONGRATS!!")
+        print("\nGAME OVER, YOU WIN, CONGRATS!!")
     
 
-    print(f"{' '.join(str)}")
+    print(f"\n{' '.join(str)}")
     flag=0
     print(stages[life])
 
